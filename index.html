@@ -5,6 +5,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="style.css" rel="stylesheet" id="style">
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
@@ -12,73 +14,178 @@
     <body>
         <div class="container">
             <div class="row">
-                <div class="col-sm-4">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">BLACK FRIDAY DEAL</div>
-                        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-                        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+                <div class="col-sm-6"> 
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Positive box</div>
+                        <div class="panel-body">
+                            <div class="panel_positive panel-default">
+                                <div class="panel-body">
+                                    <h2 class="col-sm-4">97% Online</h2>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                            <span class="sr-only">40% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel_positive panel-default">
+                                <div class="panel-body">
+                                    <h2 class="col-sm-4">2% Warning</h2>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                            <span class="sr-only">20% Complete (danger)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel_positive panel-default">
+                                <div class="panel-body">
+                                    <h2 class="col-sm-4">2% Warning</h2>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% Complete (warning)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Search device</div>
+                        <div class="panel-body">
+                            <form class="navbar-form" role="search">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                </div>
+                                <button type="submit" class="btn btn-default">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Warnings</div>
+                        <div class="panel-body">
+                            <div class="list-group">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Device</th>
+                                            <th>Last_seen</th>
+                                            <th>Times_offline</th>
+                                            <th>Battery</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><button type="button" class="list-group-item col-xs-4 col-md-3">Device</button></td>
+                                            <td><button type="button" class="list-group-item col-xs-4 col-md-3">Last seen</button></td>
+                                            <td><button type="button" class="list-group-item col-xs-4 col-md-3">Times offline</button></td>
+                                            <td><button type="button" class="list-group-item col-xs-4 col-md-3">Battery</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><button type="button" class="list-group-item col-xs-4 col-md-3">Device</button></td>
+                                            <td><button type="button" class="list-group-item col-xs-4 col-md-3">Last seen</button></td>
+                                            <td><button type="button" class="list-group-item col-xs-4 col-md-3">Times offline</button></td>
+                                            <td><button type="button" class="list-group-item col-xs-4 col-md-3">Battery</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-sm-4"> 
-                    <div class="panel panel-danger">
-                        <div class="panel-heading">BLACK FRIDAY DEAL</div>
-                        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+                
+                <div class="col-sm-6"> 
+                    <div id="panel_offline" class="panel panel-default">
+                        <div class="panel-heading">Offline devices </div>
+                        <div class="panel-body">
+                            <div class="list-group">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Device</th>
+                                            <th>Last_seen</th>
+                                            <th>Times_offline</th>
+                                            <th>Battery</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><button type="button" class="list-group-item col-xs-4 col-md-3">Device</button></td>
+                                            <td><button type="button" class="list-group-item col-xs-4 col-md-3">Last seen</button></td>
+                                            <td><button type="button" class="list-group-item col-xs-4 col-md-3">Times offline</button></td>
+                                            <td><button type="button" class="list-group-item col-xs-4 col-md-3">Battery</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><button type="button" class="list-group-item col-xs-4 col-md-3">Device</button></td>
+                                            <td><button type="button" class="list-group-item col-xs-4 col-md-3">Last seen</button></td>
+                                            <td><button type="button" class="list-group-item col-xs-4 col-md-3">Times offline</button></td>
+                                            <td><button type="button" class="list-group-item col-xs-4 col-md-3">Battery</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><button type="button" class="list-group-item col-xs-4 col-md-3">Device</button></td>
+                                            <td><button type="button" class="list-group-item col-xs-4 col-md-3">Lastseen</button></td>
+                                            <td><button type="button" class="list-group-item col-xs-4 col-md-3">Times offline</button></td>
+                                            <td><button type="button" class="list-group-item col-xs-4 col-md-3">Battery</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
-                        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
                     </div>
-                </div>
-                <div class="col-sm-4"> 
-                    <div class="panel panel-success">
-                        <div class="panel-heading">BLACK FRIDAY DEAL</div>
-                        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Room specific</div>
+                        <div class="panel-body">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle col-xs-3 col-xs-offset-9" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    Location
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li><a href="#">Room 1</a></li>
+                                    <li><a href="#">Room 2</a></li>
+                                    <li><a href="#">Room 3</a></li>
+                                </ul>
+                            </div>
+                            <div class="list-group">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Device</th>
+                                            <th>Last_seen</th>
+                                            <th>Times_offline</th>
+                                            <th>Battery</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><button type="button" class="list-group-item col-xs-4 col-md-3">Device</button></td>
+                                            <td><button type="button" class="list-group-item col-xs-4 col-md-3">Last seen</button></td>
+                                            <td><button type="button" class="list-group-item col-xs-4 col-md-3">Times offline</button></td>
+                                            <td><button type="button" class="list-group-item col-xs-4 col-md-3">Battery</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><button type="button" class="list-group-item col-xs-4 col-md-3">Device</button></td>
+                                            <td><button type="button" class="list-group-item col-xs-4 col-md-3">Last seen</button></td>
+                                            <td><button type="button" class="list-group-item col-xs-4 col-md-3">Times offline</button></td>
+                                            <td><button type="button" class="list-group-item col-xs-4 col-md-3">Battery</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
-                        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <br>
-        
         <div class="container">
             <div class="row">
-                <div class="col-sm-4">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">BLACK FRIDAY DEAL</div>
-                        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-                        </div>
-                        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">BLACK FRIDAY DEAL</div>
-                        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-                        </div>
-                        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">BLACK FRIDAY DEAL</div>
-                        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-                        </div>
-                        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-                    </div>
+                <div class="col-sm-6">
+
                 </div>
             </div>
         </div>
-        
-        <br>
-        
-        <br>
-        
-        <footer class="container-fluid text-center">
-            <p>Online Store Copyright</p>
-            <form class="form-inline">Get deals:
-                <input type="email" class="form-control" size="50" placeholder="Email Address">
-                <button type="button" class="btn btn-danger">Sign Up</button>
-            </form>
-        </footer>
     </body>
 </html>
